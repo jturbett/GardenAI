@@ -333,7 +333,7 @@ def GenerateTableHtml(items, keys_to_print, display_index=True):
   html += "</table>\n"
   return html
 
-
+# camelcase input
 def CamelCaseToSnakeCase(camel_case_input):
   """Converts an identifier in CamelCase to snake_case."""
   s1 = re.sub("(.)([A-Z][a-z]+)", r"\1_\2", camel_case_input)
@@ -369,7 +369,7 @@ def FlatbufferToDict(fb, preserve_as_numpy):
   else:
     return fb
 
-
+# flatbuffer from Pi
 def CreateDictFromFlatbuffer(buffer_data):
   model_obj = schema_fb.Model.GetRootAsModel(buffer_data, 0)
   model = schema_fb.ModelT.InitFromObj(model_obj)
